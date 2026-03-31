@@ -1,0 +1,226 @@
+/* ═══ MOBILE OVERRIDES (max-width: 767px) ═══ */
+
+/* --- Global img fix --- */
+img { height: auto; }
+
+/* --- Steps --- */
+@media (max-width: 767px) {
+  .steps__grid { grid-template-columns: 1fr; gap: 1rem; }
+  .step-card { padding: 1.25rem 1rem; text-align: left; display: flex; flex-direction: column; }
+  .step-card__num { font-size: 2rem; margin-bottom: 0.5rem; }
+  .step-card__icon { margin: 0 0 0.75rem; }
+}
+
+/* --- Reviews --- */
+@media (max-width: 767px) {
+  .reviews-swiper { padding-bottom: 2rem; }
+  .review-card { min-height: 0; }
+}
+
+/* --- Chests --- */
+@media (max-width: 767px) {
+  .hero__chests-row {
+    overflow: visible;
+    padding-bottom: 2rem;
+    width: 100%;
+  }
+  .hero__chests-row .swiper-wrapper {
+    align-items: center;
+  }
+  .hero__chests-row .swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .chest-unit {
+    width: 72vw;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .chest-img-wrap {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .chest-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* --- Trust --- */
+@media (max-width: 767px) {
+  .trust__grid { grid-template-columns: 1fr; }
+}
+
+/* --- Services --- */
+@media (max-width: 767px) {
+  .services-deck {
+    flex-direction: row;
+    overflow: visible;
+    padding-bottom: 2.5rem;
+  }
+  .services-deck .swiper-wrapper { align-items: center; }
+  .services-deck .swiper-slide { width: 220px; flex-shrink: 0; }
+  .service-card { width: 100%; }
+  .service-card--center { transform: none; }
+  .service-card:not(.service-card--center) { transform: none; }
+  .service-card__overlay { opacity: 1; }
+  .services__more-btn {
+    display: block;
+    margin: 1.5rem auto 0;
+    padding: 0.75rem 2rem;
+    border: 1px solid var(--color-gold);
+    border-radius: 24px;
+    color: var(--color-gold);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-align: center;
+    max-width: 200px;
+    transition: background 0.3s;
+  }
+  .services__more-btn:hover { background: rgba(201,168,76,0.1); }
+}
+
+/* --- FAQ --- */
+@media (max-width: 767px) {
+  .faq {
+    padding: 2rem 0 2rem;
+  }
+
+  .faq__list {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .faq-item {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .faq-item__question {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 1rem;
+    padding: 1rem 1rem;
+    overflow: hidden;
+  }
+
+  .faq-item__question > span:first-child,
+  .faq-item__question-text {
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    text-align: left;
+  }
+
+  .faq-item__icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+  }
+
+  .faq-item__answer p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .section-title.reveal-chars,
+  .section-title {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    white-space: normal;
+    hyphens: auto;
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+  }
+
+  .section-title.reveal-chars .reveal-char {
+    display: inline;
+    white-space: normal;
+  }
+
+  [id="reviews"] .section-title,
+  [id="reviews"] .section-title .reveal-char {
+    font-size: clamp(1.1rem, 5vw, 1.6rem);
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    white-space: normal;
+    display: inline;
+    line-height: 1.3;
+  }
+
+  [id="reviews"] .section-title {
+    display: block;
+    text-align: center;
+  }
+  .bg-wrap { display: none; }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background-image: url('../img/hero-bg-mobile.webp');
+    background-size: cover;
+    background-position: center top;
+    z-index: -1;
+  }
+  /* Отключить курсор на тач-устройствах */
+  .cursor,
+  .cursor-trail { display: none; }
+  /* Убрать backdrop-filter — тяжёлый для мобильного GPU */
+  .glass-panel {
+    background: rgba(13,13,26,0.95);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .header.scrolled {
+    background: rgba(13,13,26,0.97);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .chest-unit { will-change: transform; }
+  .chest-unit.is-open { will-change: auto; }
+  .header { will-change: transform; }
+  /* Отключить постоянные анимации фиксированных элементов */
+  .header__logo-star,
+  .header__logo-text {
+    animation: none;
+  }
+  /* Шар оракула — только float, убрать glow (тяжелее) */
+  .oracle-ball-wrap {
+    animation: ballFloat 4s ease-in-out infinite;
+  }
+  /* Убрать gemPulse на карточках услуг */
+  .service-card__gem {
+    animation: none;
+  }
+  /* Hero тексты — убрать shimmer, оставить статичными */
+  .hero__question,
+  .hero__subtext {
+    animation: none;
+    opacity: 0.9;
+  }
+}

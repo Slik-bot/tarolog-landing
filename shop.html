@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лавка Звёздного Пути — предметы силы</title>
+  <meta name="description" content="Украшения с натуральными камнями и ритуальные свечи от Аглаи Мериновилли">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+  <header class="shop-header" id="shopHeader">
+    <div class="shop-header__inner">
+      <a href="index.html" class="shop-header__logo">
+        <span class="shop-header__logo-star">✦</span>
+        <span class="shop-header__logo-text">Звёздный Путь</span>
+      </a>
+      <nav class="shop-header__nav">
+        <a href="index.html">← На главную</a>
+        <a href="#консультация">Консультация</a>
+      </nav>
+      <button class="shop-cart-btn" id="cartBtn" aria-label="Корзина">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="shop-cart-btn__count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="shop-hero">
+    <p class="shop-hero__eyebrow">Лавка Аглаи</p>
+    <h1 class="shop-hero__title">Предметы Силы</h1>
+    <p class="shop-hero__sub">Украшения с натуральными камнями и ритуальные свечи — каждый предмет активирован лично</p>
+  </section>
+
+  <section class="shop-filters" id="shopFilters">
+    <button class="shop-filter-btn is-active" data-filter="all">Все</button>
+    <button class="shop-filter-btn" data-filter="money">Деньги</button>
+    <button class="shop-filter-btn" data-filter="love">Любовь</button>
+    <button class="shop-filter-btn" data-filter="protection">Защита</button>
+    <button class="shop-filter-btn" data-filter="luck">Удача</button>
+  </section>
+
+  <main class="shop-grid" id="shopGrid"></main>
+
+  <div class="shop-cart" id="shopCart" aria-hidden="true">
+    <div class="shop-cart__backdrop" id="cartBackdrop"></div>
+    <div class="shop-cart__panel">
+      <div class="shop-cart__header">
+        <h2 class="shop-cart__title">Корзина</h2>
+        <button class="shop-cart__close" id="cartClose">✕</button>
+      </div>
+      <div class="shop-cart__items" id="cartItems"></div>
+      <div class="shop-cart__footer">
+        <div class="shop-cart__total">
+          Итого: <span id="cartTotal">0 ₽</span>
+        </div>
+        <button class="shop-cart__checkout" id="checkoutBtn">
+          ✦ Оформить заказ
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="shop-product-modal" id="productModal" aria-hidden="true">
+    <div class="shop-product-modal__backdrop" id="productBackdrop"></div>
+    <div class="shop-product-modal__card">
+      <button class="shop-product-modal__close" id="productClose">✕</button>
+      <div class="shop-product-modal__img-wrap">
+        <img class="shop-product-modal__img" id="modalImg" src="" alt="" loading="lazy">
+      </div>
+      <div class="shop-product-modal__info">
+        <p class="shop-product-modal__eyebrow" id="modalCategory"></p>
+        <h2 class="shop-product-modal__title" id="modalTitle"></h2>
+        <p class="shop-product-modal__desc" id="modalDesc"></p>
+        <div class="shop-product-modal__meta">
+          <p id="modalMaterial"></p>
+          <p id="modalStone"></p>
+          <p id="modalSize"></p>
+        </div>
+        <div class="shop-product-modal__footer">
+          <span class="shop-product-modal__price" id="modalPrice"></span>
+          <button class="shop-product-modal__btn" id="modalAddBtn">
+            ✦ В корзину
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="shop-checkout-modal" id="checkoutModal" aria-hidden="true">
+    <div class="shop-checkout-modal__backdrop" id="checkoutBackdrop"></div>
+    <div class="shop-checkout-modal__card">
+      <button class="shop-checkout-modal__close" id="checkoutClose">✕</button>
+      <p class="section-eyebrow">Оформление заказа</p>
+      <h2 class="shop-checkout-modal__title">Укажите данные</h2>
+      <form class="shop-checkout-form" id="checkoutForm" novalidate>
+        <div class="form-field">
+          <input class="form-input" type="text" name="order-name"
+                 id="order-name" placeholder=" " required>
+          <label class="form-label" for="order-name">Ваше имя</label>
+          <span class="form-line"></span>
+        </div>
+        <div class="form-field">
+          <input class="form-input" type="tel" name="order-phone"
+                 id="order-phone" placeholder=" " required>
+          <label class="form-label" for="order-phone">Телефон</label>
+          <span class="form-line"></span>
+        </div>
+        <div class="form-field">
+          <input class="form-input" type="text" name="order-address"
+                 id="order-address" placeholder=" " required>
+          <label class="form-label" for="order-address">Адрес доставки</label>
+          <span class="form-line"></span>
+        </div>
+        <div class="shop-checkout-total" id="checkoutTotal"></div>
+        <button type="submit" class="shop-checkout-form__btn">
+          ✦ Подтвердить заказ
+        </button>
+      </form>
+      <div class="shop-checkout-success is-hidden" id="checkoutSuccess">
+        <div class="shop-checkout-success__icon">✦</div>
+        <p class="shop-checkout-success__title">Заказ принят</p>
+        <p class="shop-checkout-success__sub">Аглая свяжется с вами в течение 24 часов для подтверждения</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="shop-footer">
+    <p class="shop-footer__logo">✦ Звёздный Путь</p>
+    <p class="shop-footer__copy">© 2026 Аглая Мериновилли. Все права защищены.</p>
+    <a href="index.html" class="shop-footer__back">← Вернуться на главную</a>
+  </footer>
+
+  <script src="js/products.js" defer></script>
+  <script src="js/shop.js" defer></script>
+</body>
+</html>

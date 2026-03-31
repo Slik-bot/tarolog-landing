@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Звёздный Путь</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <meta name="description" content="Звёздный Путь — персональные консультации таролога">
+  <meta property="og:title" content="Звёздный Путь — расклады Таро и астрология">
+  <meta property="og:description" content="Потомственный практик Аглая Мериновилли. 20 лет практики. Таро, астрология, нумерология. Консультации онлайн.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/hero-bg.webp">
+  <meta name="theme-color" content="#0a0818">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Jost:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Jost:wght@300;400;500&display=swap"></noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../shared/css/reset.css">
+  <link rel="stylesheet" href="css/sections-hero-about.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/oracle.css">
+</head>
+<body>
+<div class="bg-wrap" aria-hidden="true">
+  <img src="img/hero-bg.webp" srcset="img/hero-bg-mobile.webp 767w, img/hero-bg.webp 1200w" sizes="(max-width: 767px) 767px, 1200px" alt="" class="bg-img" fetchpriority="high">
+  <div class="bg-overlay"></div>
+</div>
+<div class="scroll-progress" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-trail" aria-hidden="true"></div>
+<!-- ═══ HEADER ═══ -->
+<header class="header" id="header"><div class="container">
+<a href="#hero" class="header__logo">
+  <span class="header__logo-star">✦</span>
+  <span class="header__logo-text">Звёздный Путь</span>
+</a>
+<nav class="header__nav">
+<a href="#about" class="header__link">О мастере</a>
+<a href="#services" class="header__link">Услуги</a>
+<a href="#steps" class="header__link">Как это работает</a>
+<a href="#faq" class="header__link">FAQ</a>
+<button class="register-open header__register">Войти</button>
+<a href="#contact" class="header__cta-link">Записаться</a>
+<a href="shop.html" class="header__link">Лавка</a>
+</nav>
+<button class="header__burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button>
+</div></header>
+<div class="nav-backdrop" id="navBackdrop"></div>
+<div class="hero__noise"></div>
+<main class="body-wrap">
+<div class="panel-wrapper">
+  <section class="hero" id="hero">
+    <div class="hero__intro">
+      <p class="hero__question">Что тревожит вашу душу?</p>
+      <p class="hero__subtext">Выберите сундук — звёзды уже знают ответ</p>
+    </div>
+    <p class="hero__hint">Выберите тот, к которому тянет рука</p>
+    <div class="hero__chests-row swiper chests-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="chest-unit" data-topic="1">
+          <div class="chest-img-wrap">
+            <img class="chest-img chest-img--closed" src="img/chest-closed.webp" alt="Сундук" loading="eager">
+            <img class="chest-img chest-img--open" src="img/chest-open.webp" alt="Открытый сундук" loading="eager">
+            <div class="chest-glow"></div><div class="chest-crack-light"></div><div class="chest-burst"></div><div class="chest-beam"></div>
+          </div>
+        </div></div>
+        <div class="swiper-slide"><div class="chest-unit chest-unit--center" data-topic="2">
+          <div class="chest-img-wrap">
+            <img class="chest-img chest-img--closed" src="img/chest-closed.webp" alt="Сундук" loading="eager">
+            <img class="chest-img chest-img--open" src="img/chest-open.webp" alt="Открытый сундук" loading="eager">
+            <div class="chest-glow"></div><div class="chest-crack-light"></div><div class="chest-burst"></div><div class="chest-beam"></div>
+          </div>
+        </div></div>
+        <div class="swiper-slide"><div class="chest-unit" data-topic="3">
+          <div class="chest-img-wrap">
+            <img class="chest-img chest-img--closed" src="img/chest-closed.webp" alt="Сундук" loading="eager">
+            <img class="chest-img chest-img--open" src="img/chest-open.webp" alt="Открытый сундук" loading="eager">
+            <div class="chest-glow"></div><div class="chest-crack-light"></div><div class="chest-burst"></div><div class="chest-beam"></div>
+          </div>
+        </div></div>
+      </div>
+      <div class="swiper-pagination chests-pagination"></div>
+      <p class="swipe-hint" aria-hidden="true">листайте</p>
+    </div>
+  </section>
+</div>
+<div class="panel-divider"><svg width="2" height="80" viewBox="0 0 2 80"><line x1="1" y1="0" x2="1" y2="80" stroke="rgba(184,115,51,0.3)" stroke-width="1" stroke-dasharray="4 6"/></svg></div>
+<div class="panel-wrapper">
+  <section class="glass-panel section-trust" id="trust">
+    <span class="panel-corner panel-corner--tl"></span><span class="panel-corner panel-corner--tr"></span><span class="panel-corner panel-corner--bl"></span><span class="panel-corner panel-corner--br"></span>
+    <p class="section-eyebrow">Звёздный Путь</p>
+    <h2 class="section-title reveal-chars">Вы здесь не случайно</h2>
+    <p class="trust__lead">Есть вопросы, на которые не отвечают ни психологи, ни коучи, ни близкие. Вопросы о любви, деньгах, судьбе и выборе — те, что не отпускают в три часа ночи.</p>
+    <div class="trust__grid">
+      <div class="trust__item">
+        <div class="trust__icon">&#10022;</div>
+        <h3 class="trust__item-title">Отношения</h3>
+        <p class="trust__item-text">Он не уходит и не остаётся. Вы устали ждать. Карты покажут — есть ли у этого будущее.</p>
+      </div>
+      <div class="trust__item">
+        <div class="trust__icon">&#10022;</div>
+        <h3 class="trust__item-title">Деньги</h3>
+        <p class="trust__item-text">Работаете больше — результата меньше. Нумерология откроет, какой поток заблокирован.</p>
+      </div>
+      <div class="trust__item">
+        <div class="trust__icon">&#10022;</div>
+        <h3 class="trust__item-title">Направление</h3>
+        <p class="trust__item-text">Вроде всё есть, но внутри пусто. Натальная карта покажет истинное предназначение.</p>
+      </div>
+      <div class="trust__item">
+        <div class="trust__icon">&#10022;</div>
+        <h3 class="trust__item-title">Решение</h3>
+        <p class="trust__item-text">Переезд, бизнес, развод. Когда цена ошибки высока — расклад даёт ясность за один сеанс.</p>
+      </div>
+    </div>
+    <a href="#contact" class="trust__cta">Найти свой ответ</a>
+  </section>
+</div>
+<div class="panel-divider"><svg width="2" height="80" viewBox="0 0 2 80"><line x1="1" y1="0" x2="1" y2="80" stroke="rgba(184,115,51,0.3)" stroke-width="1" stroke-dasharray="4 6"/></svg></div>
+<div class="panel-wrapper">
+  <section class="glass-panel" id="about">
+    <span class="panel-corner panel-corner--tl"></span><span class="panel-corner panel-corner--tr"></span><span class="panel-corner panel-corner--bl"></span><span class="panel-corner panel-corner--br"></span>
+    <div class="about__inner">
+      <div class="about__photo-col">
+        <div class="about__photo-wrap">
+          <img src="img/master-portrait.webp" alt="Аглая Мериновилли" loading="lazy" class="about__photo">
+          <div class="about__photo-glow"></div>
+        </div>
+        <div class="about__badge">
+          <span class="about__badge-num">20</span>
+          <span class="about__badge-text">лет практики</span>
+        </div>
+      </div>
+      <div class="about__content-col">
+        <p class="about__eyebrow">О мастере</p>
+        <h2 class="about__name reveal-chars">Аглая Мериновилли</h2>
+        <div class="about__divider"></div>
+        <p class="about__bio">В детстве каждое лето — к бабушке на Кавказ. Горы, травы, звёздное небо без городского света. Бабушка что-то знала — но никогда не говорила прямо. В 48 лет, разбирая старый бабушкин дом, Аглая нашла льняной свёрток под половицей — старую колоду карт. В ту ночь ей приснилась бабушка. Это изменило всё.</p>
+        <p class="about__bio about__bio--second">Они продали квартиру в городе. Перевезли семью. Отстроили дом на Кавказе. Аглая осталась. 20 лет она живёт там, где звёзды видны так, как их видели наши предки — без помех и шума. Объездила места силы: Алтай, Тибет, Кавказ, древние капища Ирана. Таро, астрология, нумерология, травничество, амулеты из камней мест силы — всё это не инструменты. Это — язык, которому её научила земля.</p>
+        <div class="about__photos">
+          <img src="img/master-ritual.webp" alt="Аглая за ритуалом" loading="lazy" class="about__photo-secondary">
+          <blockquote class="about__quote">«Я не предсказываю будущее — я читаю то, что уже написано в вас»</blockquote>
+          <img src="img/master-cards.webp" alt="Аглая с картами Таро" loading="lazy" class="about__photo-secondary">
+        </div>
+        <div class="about__stats">
+          <div class="about__stat">
+            <span class="about__stat-num" data-target="3200">0</span>
+            <span class="about__stat-plus">+</span>
+            <span class="about__stat-label">консультаций</span>
+          </div>
+          <div class="about__stat-sep"></div>
+          <div class="about__stat">
+            <span class="about__stat-num" data-target="20">0</span>
+            <span class="about__stat-label">лет практики</span>
+          </div>
+          <div class="about__stat-sep"></div>
+          <div class="about__stat">
+            <span class="about__stat-num" data-target="7">0</span>
+            <span class="about__stat-label">поколений</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="panel-divider"><svg width="2" height="80" viewBox="0 0 2 80"><line x1="1" y1="0" x2="1" y2="80" stroke="rgba(184,115,51,0.3)" stroke-width="1" stroke-dasharray="4 6"/></svg></div>
+<div class="panel-wrapper">
+  <section class="section-services" id="services">
+    <p class="section-eyebrow">Услуги</p>
+    <h2 class="section-title reveal-chars">Выберите свой расклад</h2>
+    <div class="services-deck swiper services-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="service-card" data-service="tarot">
+            <div class="service-card__img-wrap">
+              <img src="img/card-back.webp" alt="Расклад Таро" class="service-card__img" loading="lazy">
+              <div class="service-card__overlay">
+                <h3 class="service-card__title">Расклад Таро</h3>
+                <p class="service-card__desc">Ответ на конкретный вопрос о любви, карьере, решении</p>
+                <p class="service-card__price">от 2 500 ₽</p>
+                <a href="#contact" class="service-card__btn">Выбрать</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="service-card service-card--center" data-service="astro">
+            <div class="service-card__img-wrap">
+              <img src="img/card-back.webp" alt="Натальная карта" class="service-card__img" loading="lazy">
+              <div class="service-card__overlay">
+                <h3 class="service-card__title">Натальная карта</h3>
+                <p class="service-card__desc">Полный астрологический портрет личности. Один раз — на всю жизнь</p>
+                <p class="service-card__price">от 4 500 ₽</p>
+                <a href="#contact" class="service-card__btn">Выбрать</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="service-card" data-service="full">
+            <div class="service-card__img-wrap">
+              <img src="img/card-back.webp" alt="Полное погружение" class="service-card__img" loading="lazy">
+              <div class="service-card__overlay">
+                <h3 class="service-card__title">Таро + Астрология + Нумерология</h3>
+                <p class="service-card__desc">Три системы — одна картина. Глубочайший анализ</p>
+                <p class="service-card__price">от 7 500 ₽</p>
+                <a href="#contact" class="service-card__btn">Выбрать</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination services-pagination"></div>
+    </div>
+    <a href="shop.html" class="services__more-btn">Все услуги →</a>
+  </section>
+</div>
+<div class="panel-divider"><svg width="2" height="80" viewBox="0 0 2 80"><line x1="1" y1="0" x2="1" y2="80" stroke="rgba(184,115,51,0.3)" stroke-width="1" stroke-dasharray="4 6"/></svg></div>
+<div class="panel-wrapper">
+  <section class="glass-panel" id="steps">
+    <span class="panel-corner panel-corner--tl"></span>
+    <span class="panel-corner panel-corner--tr"></span>
+    <span class="panel-corner panel-corner--bl"></span>
+    <span class="panel-corner panel-corner--br"></span>
+
+    <p class="section-eyebrow">Путь к ответу</p>
+    <h2 class="section-title reveal-chars">Четыре шага к ясности</h2>
+    <p class="steps__subtitle">Никаких ритуалов и подготовки. Просто ваш вопрос — и звёзды говорят.</p>
+
+    <div class="steps__grid">
+
+      <div class="step-card js-reveal">
+        <div class="step-card__num">01</div>
+        <div class="step-card__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4z"/>
+            <path d="M24 16v8l6 4"/>
+          </svg>
+        </div>
+        <h3 class="step-card__title">Оставьте заявку</h3>
+        <p class="step-card__desc">Укажите имя, контакт и ваш главный вопрос. Это займёт одну минуту.</p>
+      </div>
+
+      <div class="step-card js-reveal">
+        <div class="step-card__num">02</div>
+        <div class="step-card__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <path d="M8 24h8M32 24h8M24 8v8M24 32v8"/>
+            <circle cx="24" cy="24" r="8"/>
+            <circle cx="24" cy="24" r="16" stroke-dasharray="4 4"/>
+          </svg>
+        </div>
+        <h3 class="step-card__title">Созвонимся</h3>
+        <p class="step-card__desc">Аглая свяжется в течение 24 часов. Уточним запрос и выберем формат консультации.</p>
+      </div>
+
+      <div class="step-card js-reveal">
+        <div class="step-card__num">03</div>
+        <div class="step-card__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <path d="M12 36L24 12l12 24"/>
+            <path d="M16 28h16"/>
+            <circle cx="24" cy="8" r="3"/>
+          </svg>
+        </div>
+        <h3 class="step-card__title">Сеанс</h3>
+        <p class="step-card__desc">Расклад, разбор карт, астрологический или нумерологический анализ. Глубоко и честно.</p>
+      </div>
+
+      <div class="step-card js-reveal">
+        <div class="step-card__num">04</div>
+        <div class="step-card__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <path d="M24 4l4 8 9 1.3-6.5 6.3 1.5 9L24 24l-8 4.6 1.5-9L11 13.3l9-1.3z"/>
+            <path d="M24 28v16M18 38h12"/>
+          </svg>
+        </div>
+        <h3 class="step-card__title">Получите запись</h3>
+        <p class="step-card__desc">Консультация записывается. Вы можете вернуться к ней в любой момент и переслушать.</p>
+      </div>
+
+    </div>
+
+    <div class="steps__cta-wrap">
+      <a href="#contact" class="steps__cta">Начать путь</a>
+    </div>
+  </section>
+</div>
+<div class="panel-divider"><svg width="2" height="80" viewBox="0 0 2 80"><line x1="1" y1="0" x2="1" y2="80" stroke="rgba(184,115,51,0.3)" stroke-width="1" stroke-dasharray="4 6"/></svg></div>
+<div class="panel-wrapper">
+  <section class="glass-panel faq" id="faq">
+    <span class="panel-corner panel-corner--tl"></span><span class="panel-corner panel-corner--tr"></span><span class="panel-corner panel-corner--bl"></span><span class="panel-corner panel-corner--br"></span>
+      <p class="faq__label">Ответы на вопросы</p>
+      <h2 class="faq__title reveal-chars">Часто задают эти вопросы</h2>
+
+      <div class="faq__list">
+
+        <div class="faq-item">
+          <button class="faq-item__question" type="button" aria-expanded="false">
+            <span class="faq-item__question-text">Это работает онлайн так же как вживую?</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Да. Карты, астрология и нумерология не зависят от расстояния. За 20 лет практики сотни моих клиентов — из разных городов и стран. Энергия не знает границ.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question" type="button" aria-expanded="false">
+            <span class="faq-item__question-text">Что если я не верю в Таро?</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Вера не нужна. Нужен честный вопрос. Карты — это инструмент анализа, не магия из сказки. Многие приходят скептиками — уходят с ответами.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question" type="button" aria-expanded="false">
+            <span class="faq-item__question-text">Сколько длится консультация?</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__answer">
+            <p>От 60 до 120 минут в зависимости от формата. Расклад Таро — час. Натальная карта — полтора. Полный сеанс — до двух часов. Запись остаётся у вас.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question" type="button" aria-expanded="false">
+            <span class="faq-item__question-text">Можно задать несколько вопросов?</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Один сеанс — один ключевой запрос. Так карты дают максимально точный ответ. Для нескольких тем — полный формат Таро + Астрология + Нумерология.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question" type="button" aria-expanded="false">
+            <span class="faq-item__question-text">Как быстро вы отвечаете на заявку?</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__answer">
+            <p>В течение 24 часов. Пишу лично — не через менеджеров. Ближайшие свободные слоты всегда в расписании.</p>
+          </div>
+        </div>
+
+      </div>
+  </section>
+</div>
+<div class="panel-divider"><svg width="2" height="80" viewBox="0 0 2 80"><line x1="1" y1="0" x2="1" y2="80" stroke="rgba(184,115,51,0.3)" stroke-width="1" stroke-dasharray="4 6"/></svg></div>
+<div class="panel-wrapper">
+<section class="glass-panel" id="reviews">
+<span class="panel-corner panel-corner--tl"></span><span class="panel-corner panel-corner--tr"></span><span class="panel-corner panel-corner--bl"></span><span class="panel-corner panel-corner--br"></span>
+<p class="section-eyebrow">Отзывы</p>
+<h2 class="section-title reveal-chars">Что говорят те, кто уже прошёл путь</h2>
+<div class="swiper reviews-swiper"><div class="swiper-wrapper">
+  <div class="swiper-slide"><div class="review-card">
+    <p class="review-card__text">Пришла с вопросом про отношения. Думала — очередная гадалка скажет «всё будет хорошо». Аглая за 20 минут описала ситуацию точнее, чем я сама её понимала. Через месяц всё изменилось именно так, как она говорила.</p>
+    <div class="review-card__footer"><div class="review-card__avatar">МК</div><div><p class="review-card__name">Марина, Москва</p>
+    <div class="review-card__stars"><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg></div>
+    </div></div>
+  </div></div>
+  <div class="swiper-slide"><div class="review-card">
+    <p class="review-card__text">Обратился перед важным бизнес-решением. Скептик, если честно. Но натальная карта дала такое понимание моих сильных сторон и слепых зон — я пересмотрел всю стратегию. Результат превзошёл ожидания.</p>
+    <div class="review-card__footer"><div class="review-card__avatar">ДП</div><div><p class="review-card__name">Дмитрий, Петербург</p>
+    <div class="review-card__stars"><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg></div>
+    </div></div>
+  </div></div>
+  <div class="swiper-slide"><div class="review-card">
+    <p class="review-card__text">Купила амулет из алтайского кварца. Уже три месяца ношу. Появилось спокойствие, которого не было давно. Плюс Аглая дала травяной сбор для сна. Сплю как в детстве.</p>
+    <div class="review-card__footer"><div class="review-card__avatar">ЕК</div><div><p class="review-card__name">Елена, Краснодар</p>
+    <div class="review-card__stars"><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg></div>
+    </div></div>
+  </div></div>
+  <div class="swiper-slide"><div class="review-card">
+    <p class="review-card__text">Была на полном сеансе — Таро, астрология и нумерология. Три часа пролетели незаметно. Вышла с таким пониманием себя, которого не давали годы психотерапии. Записалась снова.</p>
+    <div class="review-card__footer"><div class="review-card__avatar">ОЕ</div><div><p class="review-card__name">Ольга, Екатеринбург</p>
+    <div class="review-card__stars"><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l1.8 3.6L14 5.5l-3 2.9.7 4.1L8 10.4l-3.7 2.1.7-4.1-3-2.9 4.2-.9z" fill="currentColor"/></svg></div>
+    </div></div>
+  </div></div>
+</div><div class="swiper-pagination"></div></div>
+</section>
+</div>
+<div class="panel-divider"><svg width="2" height="80" viewBox="0 0 2 80"><line x1="1" y1="0" x2="1" y2="80" stroke="rgba(184,115,51,0.3)" stroke-width="1" stroke-dasharray="4 6"/></svg></div>
+<div class="panel-wrapper">
+<section class="glass-panel" id="contact">
+  <span class="panel-corner panel-corner--tl"></span><span class="panel-corner panel-corner--tr"></span><span class="panel-corner panel-corner--bl"></span><span class="panel-corner panel-corner--br"></span>
+  <p class="section-eyebrow">Записаться</p>
+  <h2 class="section-title reveal-chars">Звёзды готовы говорить</h2>
+  <p class="contact__subtitle">
+    Оставьте заявку — я свяжусь в течение 24 часов
+  </p>
+  <form class="contact-form" id="contactForm" novalidate>
+    <div class="form-field">
+      <input type="text" id="fieldName" class="form-input" autocomplete="name" required/>
+      <label for="fieldName" class="form-label">Ваше имя</label>
+      <span class="form-line"></span>
+    </div>
+    <div class="form-field">
+      <input type="text" id="fieldContact" class="form-input" autocomplete="tel" required pattern="[\+\d\s\-\(\)@]{7,20}" title="Телефон или Telegram"/>
+      <label for="fieldContact" class="form-label">Телефон или Telegram</label>
+      <span class="form-line"></span>
+    </div>
+    <div class="form-field">
+      <select id="fieldService" class="form-input form-select" required>
+        <option value="">Что вас интересует?</option>
+        <option value="tarot">Расклад Таро — от 2 500 ₽</option>
+        <option value="natal">Натальная карта — от 4 500 ₽</option>
+        <option value="complex">Таро + Астрология + Нумерология — от 7 500 ₽</option>
+        <option value="other">Другое — уточним при звонке</option>
+      </select>
+      <label for="fieldService" class="form-label form-label--select">Что вас интересует?</label>
+      <span class="form-line"></span>
+    </div>
+    <div class="form-field">
+      <textarea id="fieldQuestion" class="form-input form-textarea" rows="3"></textarea>
+      <label for="fieldQuestion" class="form-label">Ваш вопрос (необязательно)</label>
+      <span class="form-line"></span>
+    </div>
+    <button type="submit" class="contact-form__btn">
+      <span class="contact-form__btn-text">Записаться на консультацию</span>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </form>
+  <div class="contact-success" id="contactSuccess">
+    <div class="contact-success__stars">✦ ✦ ✦</div>
+    <p class="contact-success__title">Звёзды уже знают о вашем запросе</p>
+    <p class="contact-success__text">
+      Мы свяжемся с вами в течение 24 часов
+    </p>
+  </div>
+</section>
+</div>
+</main>
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer" id="footer"><div class="container"><div class="footer__inner">
+<a href="#hero" class="footer__logo">Звёздный Путь</a>
+<div class="footer__socials">
+<a href="https://t.me/zvezdnyj_put" class="footer__social" aria-label="Telegram"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M21 3L1 11l7 2.5M21 3l-5 19-8-8.5M21 3L8 13.5m0 0v6l3.5-3.5" stroke="currentColor" stroke-width="1.3" fill="none"/></svg></a>
+<a href="https://wa.me/79000000000" class="footer__social" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M3 21l1.5-5.5A9 9 0 1117.5 19L3 21z" stroke="currentColor" stroke-width="1.3" fill="none"/></svg></a>
+<a href="https://instagram.com/zvezdnyj_put" class="footer__social" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.3" fill="none"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.3" fill="none"/></svg></a>
+</div>
+<p class="footer__copy">&copy; 2026 Звёздный Путь &middot; <a href="#">Политика конфиденциальности</a></p>
+</div></div></footer>
+<div class="card-modal" id="cardModal" aria-hidden="true">
+  <div class="card-modal__backdrop"></div>
+  <div class="card-modal__card">
+    <div class="card-modal__halo"></div>
+    <button class="card-modal__close" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><line x1="5" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="5" x2="5" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <div class="card-flip" id="cardFlip">
+      <div class="card-flip__inner">
+        <div class="card-flip__back">
+          <img class="card-real card-real--back" src="img/card-back.webp" alt="Рубашка карты" loading="lazy">
+          <p class="card-flip__tap-hint">нажмите — откроется послание</p>
+        </div>
+        <div class="card-flip__front">
+          <img class="card-real card-real--front" src="img/card-front.webp" alt="Карта Таро" loading="lazy">
+          <p class="card-prophecy" id="cardProphecyInside"></p>
+        </div>
+      </div>
+    </div>
+    <a href="#contact" class="card-modal__cta" id="cardCta">Узнать, что говорят звёзды</a>
+  </div>
+</div>
+<div class="oracle-btn" id="oracleBtn">
+  <div class="oracle-ball-wrap">
+    <img src="img/crystal-ball.webp" alt="Хрустальный шар Оракула"
+      class="oracle-ball-img" width="120" height="120">
+  </div>
+  <span class="oracle-btn__label">Спросить Оракула</span>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="../shared/js/utils.js" defer></script>
+<script src="../shared/js/form-handler.js" defer></script>
+<script src="js/sounds.js" defer></script>
+<script src="js/chests.js" defer></script>
+<script src="js/effects.js" defer></script>
+<script src="js/ui.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/animations.js" defer></script>
+<script src="js/register.js" defer></script>
+<script src="js/oracle.js" defer></script>
+</body>
+</html>
