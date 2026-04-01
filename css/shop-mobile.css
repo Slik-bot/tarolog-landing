@@ -1,0 +1,107 @@
+
+.shop-footer__back {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: rgba(201,168,76,0.6);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  transition: color 0.3s;
+}
+
+.shop-footer__back:hover {
+  color: var(--color-gold);
+}
+
+.is-hidden { display: none; }
+
+.form-field {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(232,224,240,0.2);
+  color: var(--color-silver);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 1rem 0 0.5rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-label {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: rgba(232,224,240,0.5);
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label {
+  top: -0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-gold);
+}
+
+.form-line {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-gold);
+  transition: width 0.4s ease;
+}
+
+.form-input:focus ~ .form-line {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .shop-product-modal__card {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-product-modal__img-wrap {
+    flex-shrink: 0;
+    max-height: 280px;
+    aspect-ratio: auto;
+    overflow: hidden;
+  }
+  .shop-product-modal__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .shop-product-modal__info {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem 4rem;
+  }
+  .shop-header__nav { display: none; }
+  .shop-hero { padding: 6rem 1.5rem 3rem; }
+  .shop-filters { padding: 0 1rem 2rem; }
+}
+
+@media (max-width: 480px) {
+  .shop-grid { grid-template-columns: 1fr; }
+}

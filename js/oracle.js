@@ -136,7 +136,7 @@ function bindOracleChatEvents(overlay, openFn, closeFn, state) {
   });
 }
 
-(function initOracle() {
+function initOracle() {
   const state = {
     sessionId: 'session_' + Math.random().toString(36).substr(2, 9),
     messages: [],
@@ -146,4 +146,14 @@ function bindOracleChatEvents(overlay, openFn, closeFn, state) {
   const openFn = () => { overlay.classList.add('open'); document.body.classList.add('modal-open'); };
   const closeFn = () => { overlay.classList.remove('open'); document.body.classList.remove('modal-open'); };
   bindOracleChatEvents(overlay, openFn, closeFn, state);
-})();
+}
+
+const startOracle = () => {
+  initOracle();
+  ['mousemove', 'touchstart', 'scroll'].forEach(evt =>
+    document.removeEventListener(evt, startOracle)
+  );
+};
+['mousemove', 'touchstart', 'scroll'].forEach(evt =>
+  document.addEventListener(evt, startOracle, { once: true, passive: true })
+);
