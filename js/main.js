@@ -2,6 +2,10 @@
 // 01-tarolog: main.js
 // ═══════════════════════════════════════
 
+// Всегда стартуем с верха страницы
+history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+
 // === 5. SCROLL REVEAL (появление при скролле) ===
 function initScrollReveal() {
   const reveals = [
